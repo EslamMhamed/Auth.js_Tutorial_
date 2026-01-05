@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Github } from "@/components/ui/github";
+import { signIn } from "../../auth";
 
 const GithubSignIn = () => {
   return (
     <form
       action={async () => {
-        "use server";
+        "use server"
+        await signIn("github")
       }}
     >
       <Button className="w-full" variant="outline">
